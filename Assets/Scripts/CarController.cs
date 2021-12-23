@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RDG;
 
 public class CarController : MonoBehaviour
 {
@@ -46,6 +47,7 @@ public class CarController : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             ChangeDirection();
+            Vibration.Vibrate(100, 10, false);
         }
     }
 
