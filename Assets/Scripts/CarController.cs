@@ -5,13 +5,14 @@ using RDG;
 
 public class CarController : MonoBehaviour
 {
-    [SerializeField] private float moveSpeed = 5f;
+    public static CarController Instance;
+    [SerializeField] public float moveSpeed = 8f;
     private bool movingLeft = true;
     //private bool firstInput = true;
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
-
+        Instance = this;
     }
 
     // Update is called once per frame
